@@ -21,7 +21,7 @@ resource "aws_security_group" "golfzon-sg" {
 
   ingress {
     description      = "ssh"
-    from_port        = 22
+    from_port        = 0
     to_port          = 22
     protocol         = "tcp"
     cidr_blocks      = [aws_vpc.golfzon-vpc.cidr_block]
