@@ -24,7 +24,8 @@ resource "aws_security_group" "golfzon-sg" {
     from_port        = 0
     to_port          = 22
     protocol         = "tcp"
-    cidr_blocks      = [aws_vpc.golfzon-vpc.cidr_block]
+    # cidr_blocks      = [aws_vpc.golfzon-vpc.cidr_block]
+    cidr_blocks = ["0.0.0.0/0"]
     ipv6_cidr_blocks = [aws_vpc.golfzon-vpc.ipv6_cidr_block]
   }
 
