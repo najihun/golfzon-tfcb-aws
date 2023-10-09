@@ -20,9 +20,9 @@ resource "aws_security_group" "golfzon-sg" {
   vpc_id      = aws_vpc.golfzon-vpc.id
 
   ingress {
-    description      = "http"
-    from_port        = 80
-    to_port          = 80
+    description      = "ssh"
+    from_port        = 22
+    to_port          = 22
     protocol         = "tcp"
     cidr_blocks      = [aws_vpc.golfzon-vpc.cidr_block]
     ipv6_cidr_blocks = [aws_vpc.golfzon-vpc.ipv6_cidr_block]
